@@ -2,6 +2,6 @@
 @def showall = true
 @def tags = ["template", "fix-me"]
 
-\preamble{AUTHORS}
+\preamble{Geoffroy Leconte}
 
 \literate{/index.jl}

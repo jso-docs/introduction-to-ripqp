@@ -14,3 +14,5 @@ franklin.pub
 node_modules/
 package.json
 package-lock.json
+*.rhs
+*.mtx
