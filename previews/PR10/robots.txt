@@ -1,0 +1,4 @@
+Sitemap: https://introduction-to-ripqp.netlify.app/previews/PR10/sitemap.xml
+
+User-agent: *
+Disallow:
