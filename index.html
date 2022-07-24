@@ -51,7 +51,7 @@ println&#40;stats&#41;</code></pre><pre><code class="plaintext code-output">Gene
   multipliers_L: [4.305014036777336  7.44283917646875e-10  7.05501403716986]
   multipliers_U: [0.0  0.0  0.0]
   iterations: 16
-  elapsed time: 13.816581010818481
+  elapsed time: 12.27580213546753
   solver specific:
     nvar_slack: 3
     pdd: 6.42239516535383e-10
@@ -84,14 +84,14 @@ QM &#61; QuadraticModel&#40;readqps&#40;&quot;QAFIRO.SIF&quot;&#41;&#41;</code><
 pddH &#61; stats.solver_specific&#91;:pddH&#93;</code></pre><pre><code class="plaintext code-output">11-element Vector{Float64}:
   5.202001396903418
  47.09323866671629
- 37.04720747453737
-  2.9705658207297962
-  2.098295508506332
-  1.9495144855431608
-  0.7749800659962609
-  0.05312764723712889
-  6.1003351407542807e-5
-  6.100289284109828e-8
+ 37.04720747453738
+  2.970565820729763
+  2.098295508506326
+  1.9495144855431563
+  0.7749800659963283
+  0.05312764723713843
+  6.1003351408057064e-5
+  6.100289266968698e-8
   6.100364427337392e-11</code></pre>
 <h2 id=change_configuration_and_tolerances ><a href="#change_configuration_and_tolerances" class=header-anchor >Change configuration and tolerances</a></h2>
 <p>You can use <code>RipQP</code> without scaling with:</p>
@@ -108,55 +108,55 @@ stats1 &#61; ripqp&#40;QM, w &#61; w&#41;</code></pre><pre><code class="plaintex
 K &#61; MatrixMarket.mmread&#40;&quot;test_K_iter4.mtx&quot;&#41;
 rhs_aff &#61; readdlm&#40;&quot;test_rhs_iter4_aff.rhs&quot;, Float64&#41;&#91;:&#93;
 rhs_cc &#61;  readdlm&#40;&quot;test_rhs_iter4_cc.rhs&quot;, Float64&#41;&#91;:&#93;</code></pre><pre><code class="plaintext code-output">74-element Vector{Float64}:
-   0.07837139164737023
-  -7.091206996151939
-   0.3635981278147607
-   0.8250815460305427
-  -0.00040147281584494514
-   2.158674383677637
-   2.2104069437147964
-   2.2235728107261745
-   2.94387451440359
-   1.4981961385414728
-   1.5167025157281597
-   1.5247720335283859
-  -0.1451419640110716
-   0.004907108705719495
-   0.0046359938391464135
-   0.28281937176079963
-   0.5174554871918309
-   0.9325555982389576
-   0.044295963247573414
-   0.1772843350098877
-   0.002306858595382712
-   2.680126856554239
-   2.736567957613221
-   2.7727889408555413
-   3.04105291438579
-   1.3719881661423907
-   1.370988385839873
-   1.3753052673551265
-   1.107902117891403
-   0.021880514837781133
-   0.16066534731964646
-   1.3820252343671953
-   0.9708231936288841
-  -0.0013012372493896964
-  -2.3433860265505726
-  -2.329985508974372
-  -2.3331997998198317
-  -1.612366920991559
-   0.000115615104224318
-  -2.314181935120411
-  -2.339026182201335
-  -2.358063791414407
-  -3.014744560078991
- -21.892002551120086
-  -0.004438733131649133
-  -1.074028796708962
-  -0.055497274624436384
-   0.0014955881627821952
-   0.0008872261362272329
+   0.07837139164735085
+  -7.09120699615255
+   0.36359812781474377
+   0.8250815460305321
+  -0.00040147281584434656
+   2.1586743836776954
+   2.2104069437148492
+   2.2235728107262327
+   2.9438745144037344
+   1.4981961385415616
+   1.5167025157282503
+   1.5247720335284778
+  -0.1451419640110269
+   0.004907108705719608
+   0.004635993839146626
+   0.28281937176079186
+   0.5174554871918632
+   0.9325555982389999
+   0.044295963247581185
+   0.17728433500988922
+   0.002306858595389114
+   2.6801268565543217
+   2.736567957613303
+   2.7727889408556154
+   3.0410529143859386
+   1.3719881661424735
+   1.370988385839955
+   1.3753052673552157
+   1.1079021178914563
+   0.021880514837783655
+   0.1606653473196545
+   1.3820252343672508
+   0.9708231936286033
+  -0.0013012372493887855
+  -2.34338602655064
+  -2.329985508974437
+  -2.3331997998198957
+  -1.6123669209916318
+   0.00011561510422433581
+  -2.314181935120479
+  -2.3390261822014002
+  -2.3580637914144633
+  -3.014744560079138
+ -21.892002551120996
+  -0.00443873313164922
+  -1.0740287967090154
+  -0.055497274624443614
+   0.001495588162782373
+   0.0008872261362272075
    0.0
    0.0
    0.0
@@ -184,7 +184,7 @@ rhs_cc &#61;  readdlm&#40;&quot;test_rhs_iter4_cc.rhs&quot;, Float64&#41;&#91;:&
    0.0</code></pre>
 <h2 id=timers ><a href="#timers" class=header-anchor >Timers</a></h2>
 <p>You can see the elapsed time with:</p>
-<pre><code class=language-julia >stats1.elapsed_time</code></pre><pre><code class="plaintext code-output">0.20933914184570312</code></pre>
+<pre><code class=language-julia >stats1.elapsed_time</code></pre><pre><code class="plaintext code-output">0.21129703521728516</code></pre>
 <p>For more advance timers you can use <a href="https://github.com/KristofferC/TimerOutputs.jl">TimerOutputs.jl</a>:</p>
 <pre><code class=language-julia >using TimerOutputs
 TimerOutputs.enable_debug_timings&#40;RipQP&#41;
@@ -194,18 +194,18 @@ TimerOutputs.complement&#33;&#40;RipQP.to&#41; # print complement of timed secti
 show&#40;RipQP.to, sortby &#61; :firstexec&#41;</code></pre><pre><code class="plaintext code-output"> ────────────────────────────────────────────────────────────────────────────────
                                         Time                    Allocations      
                                ───────────────────────   ────────────────────────
-       Tot / % measured:            2.37s /  57.6%            177MiB /  56.6%    
+       Tot / % measured:            2.16s /  56.6%            177MiB /  56.5%    
 
  Section               ncalls     time    %tot     avg     alloc    %tot      avg
  ────────────────────────────────────────────────────────────────────────────────
- ripqp                      1    1.36s  100.0%   1.36s    100MiB  100.0%   100MiB
-   ~ripqp~                  1    1.36s   99.9%   1.36s    100MiB   99.8%   100MiB
+ ripqp                      1    1.22s  100.0%   1.22s    100MiB  100.0%   100MiB
+   ~ripqp~                  1    1.22s   99.9%   1.22s    100MiB   99.8%   100MiB
    allocate workspace       1    122μs    0.0%   122μs   33.7KiB    0.0%  33.7KiB
-   init solver              1   87.5μs    0.0%  87.5μs   25.3KiB    0.0%  25.3KiB
-   display                 11    836μs    0.1%  76.0μs    101KiB    0.1%  9.14KiB
-   update solver           10   98.8μs    0.0%  9.88μs   6.25KiB    0.0%     640B
-   solver aff              10   35.2μs    0.0%  3.52μs     0.00B    0.0%    0.00B
-   solver cc               10   30.0μs    0.0%  3.00μs     0.00B    0.0%    0.00B
+   init solver              1    104μs    0.0%   104μs   25.3KiB    0.0%  25.3KiB
+   display                 11    824μs    0.1%  74.9μs    100KiB    0.1%  9.12KiB
+   update solver           10   76.9μs    0.0%  7.69μs   6.25KiB    0.0%     640B
+   solver aff              10   14.4μs    0.0%  1.44μs     0.00B    0.0%    0.00B
+   solver cc               10   12.7μs    0.0%  1.27μs     0.00B    0.0%    0.00B
  ────────────────────────────────────────────────────────────────────────────────</code></pre>
 
 </div>
@@ -278,7 +278,7 @@ show&#40;RipQP.to, sortby &#61; :firstexec&#41;</code></pre><pre><code class="pl
     <footer class=footer >
       <div class="content has-text-centered is-small">
         &copy; Abel Soares Siqueira. <br>
-        Last modified: July 17, 2022.<br>
+        Last modified: July 24, 2022.<br>
         <a class=link  href="https://github.com/JuliaSmoothOptimizers/">JSO at GitHub</a>
       </div>
     </footer>
